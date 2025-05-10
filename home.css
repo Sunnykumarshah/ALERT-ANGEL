@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar */
+  header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    color:palevioletred;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  header button {
+    background-color:palevioletred;;
+    color: #fff;
+    border: none;
+    border-color:rgb(245, 245, 245) ;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  header button:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Main Content */
+  main {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Grid for 4 buttons */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2);
+    gap: 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button-grid button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-grid button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* SOS Button */
+  .sos-button {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    z-index: 2;
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
